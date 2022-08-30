@@ -22,13 +22,13 @@ class Adapter extends Target {
 	}
 }
 
-function clientCode(target: Target) {
+function clientCodeAdapter(target: Target) {
 	console.log(target.request());
 }
 
 const target = new Target();
-clientCode(target);
+clientCodeAdapter(target);
 
 const adaptee = new Adaptee();
 const adapter = new Adapter(adaptee);
-clientCode(adapter);
+clientCodeAdapter(adapter);
